@@ -22,7 +22,7 @@ public class BitalinoDemo {
 
             //You need TO CHANGE THE MAC ADDRESS
             //You should have the MAC ADDRESS in a sticker in the Bitalino
-            String macAddress = "98:D3:C1:FD:2F:EA";
+            String macAddress = "20:18:06:13:01:08";
             
             //Sampling rate, should be 10, 100 or 1000
             int SamplingRate = 100;
@@ -30,7 +30,7 @@ public class BitalinoDemo {
 
             // Start acquisition on analog channels A2 and A6
             // For example, If you want A1, A3 and A4 you should use {0,2,3}
-            int[] channelsToAcquire = {1};
+            int[] channelsToAcquire = {0};
             bitalino.start(channelsToAcquire);
 
             //Read in total 10000000 times
@@ -47,10 +47,10 @@ public class BitalinoDemo {
                     System.out.println((j * block_size + i) + " seq: " + frame[i].seq + " "
                             + frame[i].analog[0] + " "
                             + frame[i].analog[1] + " "
-                    //  + frame[i].analog[2] + " "
-                    //  + frame[i].analog[3] + " "
-                    //  + frame[i].analog[4] + " "
-                    //  + frame[i].analog[5]
+                      //+ frame[i].analog[2] + " "
+                      //+ frame[i].analog[3] + " "
+                      //+ frame[i].analog[4] + " "
+                      //+ frame[i].analog[5]
                     );
 
                 }
