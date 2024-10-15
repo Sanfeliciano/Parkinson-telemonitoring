@@ -68,7 +68,6 @@ public class Patient {
     public Pojos.Signal getSignal() {
         return Signal;
     }
-
     public void setSignal(Pojos.Signal signal) {
         Signal = signal;
     }
